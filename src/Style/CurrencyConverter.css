@@ -1,52 +1,72 @@
-.container {
-    width: 80%;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .titulo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .actualizacion {
-    font-style: italic;
-    margin-bottom: 20px;
-  }
-  
+/* Estilos para el título */
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilos para la información de actualización */
+.actualizacion {
+  font-style: italic;
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el contenedor del conversor */
+.conversor {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos para el contenedor de los inputs */
+.inputs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilos para los inputs de tipo número dentro de .inputs */
+.inputs input[type="number"] {
+  width: 100px;
+  margin-right: 10px; /* Espaciado derecho */
+}
+
+/* Estilos para los selects dentro de .inputs */
+.inputs select {
+  margin-right: 10px; /* Espaciado derecho */
+}
+
+/* Estilos para el texto de conversión */
+.conversion {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Estilos para el contenedor de las divisas */
+.divisas {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos específicos para pantallas con un ancho máximo de 768px */
+@media only screen and (max-width: 768px) {
+  /* Cambia la disposición del conversor a columnas en pantallas pequeñas */
   .conversor {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .inputs {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    flex-direction: column;
   }
-  
+
+  /* Ajusta el ancho de los inputs a 100% en pantallas pequeñas */
   .inputs input[type="number"] {
-    width: 100px;
-    margin-right: 10px;
+    width: 100%;
+    margin-bottom: 10px; /* Espaciado inferior */
   }
-  
+
+  /* Ajusta el ancho de los selects a 100% en pantallas pequeñas */
   .inputs select {
-    margin-right: 10px;
+    width: 100%;
+    margin-bottom: 10px; /* Espaciado inferior */
   }
-  
-  .conversion {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .divisas {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
+}
