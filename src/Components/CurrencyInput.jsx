@@ -9,6 +9,7 @@ const CurrencyConverter = () => {
     const [exchangeRate, setExchangeRate] = useState(null);
     const [fechaActualizacion, setFechaActualizacion] = useState('');
     const [opcionesMonedas, setOpcionesMonedas] = useState([]);
+    const [modoClaro, setModoClaro] = useState(true);
 
     useEffect(() => {
         fetch(`https://api.exchangerate-api.com/v4/latest/${monedaOne}`)
@@ -27,9 +28,31 @@ const CurrencyConverter = () => {
         setMonedaTwo(temp);
     };
 
+       const toggleTheme = () => {
+        setModoClaro(!modoClaro);
+        // Podrías agregar aquí lógica adicional para cambiar otros estilos o clases según el modo claro/oscuro
+        if (modoClaro) {
+            // Lógica para cambiar a modo oscuro
+            document.body.classList.add('dark-mode');
+        } else {
+            // Lógica para cambiar a modo claro
+            document.body.classList.remove('dark-mode');
+        }
+    };
+
+    // Efecto para cambiar el tema claro/oscuro
+    useEffect(() => {
+        // Cambiar el color de fondo del body dependiendo del modo claro/oscuro
+        document.body.style.backgroundColor = modoClaro ? '#fff' : '#333';
+        document.body.style.color = modoClaro ? '#333' : '#fff';
+    }, [modoClaro]);
+
+
     return (
         <div className="container">
-            <div className="actualizacion">Actualización: {fechaActualizacion}</div>
+            <div className="actualizacion">Actualización: {fechaActualizacion}
+            <button className="btn btn-primary" onClick={toggleTheme}>{modoClaro ? '🌑' : '☀️'}</button>
+            </div>
 
             
             <div className="conversor d-flex flex-column flex-md-row align-items-center justify-content-center">
@@ -47,12 +70,13 @@ const CurrencyConverter = () => {
                 </div>
 
                 <div className="d-flex align-items-center">
+                <input type="number" value={cantidadTwo} disabled />
                     <select className="mx-2" value={monedaTwo} onChange={e => setMonedaTwo(e.target.value)}>
                         {opcionesMonedas.map(moneda => (
                             <option key={moneda} value={moneda}>{moneda}</option>
                         ))}
                     </select>
-                    <input type="number" value={cantidadTwo} disabled />
+                    
                 </div>
             </div>
 
