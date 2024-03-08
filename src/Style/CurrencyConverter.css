@@ -1,0 +1,52 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .actualizacion {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .conversor {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .inputs input[type="number"] {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .inputs select {
+    margin-right: 10px;
+  }
+  
+  .conversion {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .divisas {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
