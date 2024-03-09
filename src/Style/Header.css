@@ -1,0 +1,23 @@
+.Logo {
+    max-width: 100px; /* Cambia este valor según el tamaño deseado */
+    height: auto;
+    font-size: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px; /* Añade un margen superior para separar la imagen del menú */
+    margin-bottom: 10px; /* Añade un margen inferior para separar la imagen del título */
+}
+
+h1 {
+    font-size: 2em; /* Cambia este valor para ajustar el tamaño del título */
+    font-family: Arial, sans-serif; /* Cambia la fuente si deseas una diferente */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    letter-spacing: 2px; /* Añade espacio entre letras para un efecto más llamativo */
+    margin-top: 10px; /* Agrega un margen superior para separar el título de la imagen */
+    margin-bottom: 10px; /* Agrega un margen inferior para separar el título del menú */
+    color: #949402; /* Cambia el color del texto si lo deseas */
+}
+
+
