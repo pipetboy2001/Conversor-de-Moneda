@@ -51,7 +51,7 @@ const CurrencyConverter = () => {
     return (
         <div className="container">
             <div className="actualizacion">Actualización: {fechaActualizacion}
-            <button className="btn btn-primary" onClick={toggleTheme}>{modoClaro ? '🌑' : '☀️'}</button>
+            <button className="btn btn-info custom-btn" onClick={toggleTheme}>{modoClaro ? '🌑' : '☀️'}</button>
             </div>
 
             

@@ -9,6 +9,8 @@
 .actualizacion {
   font-style: italic;
   margin-bottom: 20px; /* Espaciado inferior */
+  /* Centra el texto */
+  text-align: center;
 }
 
 /* Estilos para el contenedor del conversor */
@@ -48,6 +50,12 @@
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
+}
+
+.custom-btn {
+
+  padding: 8px 16px; /* Ajusta el espaciado como desees */
+  margin-left: 10px; /* Agrega margen izquierdo para separar del texto */
 }
 
 /* Estilos específicos para pantallas con un ancho máximo de 768px */

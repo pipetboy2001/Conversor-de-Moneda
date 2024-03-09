@@ -1,22 +1,50 @@
+/* Footer Styles */
 .footer {
-    background-color: #262626b0;
-    margin-top: 5%;
-    padding: 5% 0;
-    text-align: center;
-  }
-  
-  .footer__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .footer__github-icon {
-    margin-right: 5px;
-  }
+  position: fixed;  /* Fix the footer to the bottom of the viewport */
+  bottom: 0;         /* Position it at the absolute bottom */
+  left: 0;           /* Align it to the left edge of the viewport */
+  width: 100%;        /* Make it span the full width of the viewport */
+  background-color: #f0f0f0;  /* Set a background color */
+  padding: 1rem 2rem; /* Add some padding for content spacing */
+}
 
-  .footer__link {
-    color: #fff;
-    text-decoration: none;
-  }
-  
+.footer.footer--fixed-bottom {
+  /* Additional styles for the specific footer class, if needed */
+
+  /* Example: Add a border to the top of the footer */
+  border-top: 1px solid #ccc;
+
+  /* Example: Change the background color */
+  background-color: #f5f5f5;
+
+  /* Example: Change the padding */
+  padding: 1rem 2rem;
+
+  /* Example: Change the text color */
+  color: #333;
+
+  /* Example: Add a box shadow */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer__content {
+  display: flex;     /* Arrange content horizontally */
+  justify-content: space-between; /* Distribute content evenly with space at both ends */
+  align-items: center; /* Align content vertically in the middle */
+}
+
+.footer__link {
+  color: #333;         /* Text color for the link */
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold;   /* Add some emphasis */
+  transition: color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.footer__link:hover {
+  color: #000;  /* Change color on hover */
+}
+
+.footer__github-icon {
+  margin-right: 0.5rem; /* Add a bit of space between the icon and text */
+  font-size: 1.2rem;      /* Adjust icon size as needed */
+}
