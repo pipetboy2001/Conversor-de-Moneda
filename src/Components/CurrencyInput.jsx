@@ -50,11 +50,27 @@ const CurrencyConverter = () => {
 
     return (
         <div className="container">
-            <div className="actualizacion">Actualización: {fechaActualizacion}
-            <button className="btn btn-info custom-btn" onClick={toggleTheme}>{modoClaro ? '🌑' : '☀️'}</button>
-            </div>
-
             
+            <div className="actualizacion d-flex align-items-center justify-content-center">
+                Actualización: {fechaActualizacion}
+                <div className="form-check form-switch ms-3">
+                    <input
+                        className="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="modoSwitch"
+                        checked={modoClaro}
+                        onChange={toggleTheme}
+                    />
+                    <label className="form-check-label" htmlFor="modoSwitch">
+                        <span>{modoClaro ? 'Modo Claro' : 'Modo Oscuro'} </span>
+                        <span role="img" aria-label="modo emoji">
+                            {modoClaro ? '☀️' : '🌑'}
+                        </span>
+                    </label>
+                </div>
+            </div> 
+
             <div className="conversor d-flex flex-column flex-md-row align-items-center justify-content-center">
                 <div className="d-flex align-items-center">
                     <input type="number" value={cantidadOne} onChange={e => setCantidadOne(e.target.value)} />
